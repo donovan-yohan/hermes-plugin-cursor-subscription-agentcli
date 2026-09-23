@@ -1,0 +1,17 @@
+name: cursor-subscription-agentcli-experimental
+kind: model-provider
+version: 0.1.0
+manifest_version: 2
+description: Cursor Subscription AgentCLI (Experimental) — drive your Cursor subscription through the official `agent` CLI; Hermes owns tools, approvals and compaction
+author: Donovan Yohan
+license: MIT
+homepage: https://github.com/donovan-yohan/hermes-plugin-cursor-subscription-agentcli
+tags: [model-provider, cursor, subscription, experimental]
+requires_hermes: ">=0.21.4"
+platforms: [macos, linux]
+optional_env:
+  - CURSOR_AGENTCLI_COMMAND
+external_dependencies:
+  - name: agent
+    check: "agent --version"
+    install: "curl https://cursor.com/install -fsS | bash"
